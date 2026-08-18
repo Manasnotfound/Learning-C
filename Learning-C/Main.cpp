@@ -1,13 +1,14 @@
 #include <iostream>
+#include "Log.h"
 
 int MultiplyAndLog(int a, int b)
 {
 	int result = a * b;
-	std::cout << "The result of multiplying " << a << " and " << b << " is: " << result << std::endl;
+	log("The result of multiplying 5 and 3 is: 15");
 	return result;
 }
 
-void Process(const char* message)
+void Log(const char* message)
 {
 	std::cout << message << std::endl;
 }
