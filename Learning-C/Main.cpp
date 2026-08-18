@@ -16,8 +16,7 @@ void Log(const char* message)
 
 int main()
 {
-	initLog();
-	log("Starting the multiplication and logging process...");
+	Log("Starting the program...");
 	MultiplyAndLog(5, 3);
 	MultiplyAndLog(10, 2);
 	MultiplyAndLog(7, 4);
