@@ -4,36 +4,10 @@ using namespace std;
 
 int main()
 {
-	int n = 1;
-	bool LOOP = true;
-	for (; LOOP;)
-	{cout << "loop Works" << endl;
-		n++;
-		if (n > 4)
-		{
-			LOOP = false;
-		}
-	}	
-	cout << "=========================" << endl;
-	n = 1;
-	while (!LOOP)
+	for (int i = 0; i < 10; i++)
 	{
-		cout << "while Works" << endl;
-		n++;
-		if (n > 4)
-		{
-			LOOP = true;	
-		}
+		if (i % 2 ==0)
+		    break;
+		cout << i << endl;
 	}
-	cout << "========================="<< n << endl;
-	do
-	{
-		cout << "do while Works" << endl;
-		n++;
-		if (n > 8)
-		{
-			LOOP = false;
-		}
-	} while (!LOOP);
-	
 }
