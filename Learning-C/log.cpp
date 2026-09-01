@@ -4,16 +4,10 @@ using namespace std;
 
 int main()
 {
-	int n = 1;
-	bool comparison = n == 10;
-	if (comparison)
+	int n;
+	for (n = 1; n <= 10; n++)
 	{
-		cout << "Hello' World" << endl;
-		return 0;
+		cout << "The value of n is: " << n << endl;
 	}
-	else
-	{
-		cout << "Bye World" << endl;
-	}
-	cin.get();
+	
 }
