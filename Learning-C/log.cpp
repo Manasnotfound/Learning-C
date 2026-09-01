@@ -2,20 +2,18 @@
 #include<stdlib.h>
 using namespace std;
 
-
-void output()
-{
-	cout << "Hello World" << endl;
-}
-
 int main()
 {
-	int n;
-	cin >> n;
-	for (int i=0;i<n;i++)
+	int n = 1;
+	bool comparison = n == 10;
+	if (comparison)
 	{
-		output();
+		cout << "Hello' World" << endl;
+		return 0;
 	}
-	return 0;
-	
+	else
+	{
+		cout << "Bye World" << endl;
+	}
+	cin.get();
 }
