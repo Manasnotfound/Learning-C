@@ -4,9 +4,8 @@ using namespace std;
 
 int main()
 {
-	int var = 10;
-	int* ptr = &var;
-	cout << "Value of var: " << var << endl;
-	cout << "Address of var: " << ptr << endl;
-	
+	char* buffer = new char[10];
+	memset(buffer, 0, 10);
+
+	delete[] buffer;
 }
