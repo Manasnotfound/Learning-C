@@ -1,11 +1,22 @@
 #include <iostream>
 #include<stdlib.h>
 using namespace std;
+#include "log.h"
+
+void increment(int& value)
+{
+	value++;
+}
 
 int main()
 {
-	char* buffer = new char[10];
-	memset(buffer, 0, 10);
+	int a = 10;
+	int b = 90;
+	
+	int& ref = a;
+	ref = b;
+	
+	increment(a);
+	log(a);
 
-	delete[] buffer;
 }
