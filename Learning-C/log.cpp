@@ -7,15 +7,14 @@ class Player
 	public:
 		int x, y;
 		int speed;
+		void Move(int xa, int ya)
+		{
+			x += xa * speed;
+			y += ya * speed;
+		}
 };
-
-void Move(Player& P1, int dx, int dy)
-{
-	P1.x += dx * P1.speed;
-	P1.y += dy * P1.speed;
-}
 
 int main(){
 	Player P1;
-	Move(P1, 1, 0);	
+	P1 .Move(1, 0);	
 } 
