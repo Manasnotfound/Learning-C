@@ -1,21 +1,44 @@
 #include <iostream>
-#include<stdlib.h>
-using namespace std;
 
-class Player
+class Log
 {
 	public:
-		int x, y;
-		int speed;
-		int* Move(int xa, int ya)
+		const int LogLevelError = 0;
+		const int LogLevelWarning = 1;
+		const int LogLevelInfo = 2;
+	private:
+		int m_logLevel = LogLevelInfo;
+	public:
+		void SetLevel(int level)
 		{
-			x += xa * speed;
-			y += ya * speed;
-			return &x; // This is a simple return, you might want to return both coordinates
+			m_logLevel = level;
+		}
+		void Error(const char* message)
+		{
+			std::cout << "Error: " << message << std::endl;
+		}
+		void Warn(const char* message)
+		{
+			if (m_logLevel >= LogLevelWarning)
+			{
+				std::cout << "Warning: " << message << std::endl;
+			}
+		}
+		void Info(const char* message)
+		{
+			if (m_logLevel >= LogLevelInfo)
+			{
+				std::cout << "Info: " << message << std::endl;
+			}
 		}
 };
 
-int main(){
-	Player P1;
-	cout<<*P1.Move(1, 0)<<endl;	
+int main()
+{
+	Log logger;
+	logger.SetLevel(logger.LogLevelInfo);
+	logger.Error("This is an error message.");
+	logger.Warn("This is a warning message.");
+	logger.Info("This is an info message.");
+
 } 
