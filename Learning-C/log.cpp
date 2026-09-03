@@ -2,32 +2,17 @@
 #include<stdlib.h>
 using namespace std;
 
-bool isPalindrome(int x) 
+class Player
 {
-        string d = to_string(x);
-		int len = d.length();
-		for(int i=0;i<len;i++)
-		{
-			if(i>=len/2) break;
-			if(d[i]!=d[len-i-1])return false;
-		}
-		return true;
-}
+	public:
+		int x, y;
+		int speed;
+};
 
 int main(){
-	int x; cin>> x;
-	cout<<isPalindrome(x);
-	
+	Player P1;
+	P1.x = 10;
+	P1.y = 20;
+	P1.speed = 5;	
 }
-
-
-
-//  void increment(int& value){
-//         value++;
-//     }
-//     bool isPalindrome(int x) {
-//         string d = to_string(x);
-//         int i = -1;
-//         increment(i);
-//         return d(i)
         
