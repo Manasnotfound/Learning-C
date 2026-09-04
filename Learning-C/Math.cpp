@@ -1,10 +1,9 @@
-const char* log(const char* message)
+#include <iostream>
+
+extern int s_variable;
+
+int main()
 {
-	return message;
-}
-	
-int multiply(int a, int b)
-{
-	log("Multiplying numbers");
-	return a * b;
+	std::cout << "Static variable value: " << s_variable << std::endl;
+	return 0;
 }
