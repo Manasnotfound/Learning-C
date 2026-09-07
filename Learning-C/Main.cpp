@@ -2,7 +2,7 @@
 
 struct Entity
 {
-	int x, y;
+	static int x, y;
 
 	static void Print()
 	{
