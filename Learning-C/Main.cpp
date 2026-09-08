@@ -5,35 +5,30 @@ class Entity
 public:
 	float X, Y;
 
-	Entity(float x, float y)
+	Entity()
 	{
-		X = x;
-		Y = y;
+		std::cout << "Entity created" << std::endl;
+		X = 0.0f;
+		Y = 0.0f;
 	}
 
+	~Entity()
+	{
+		std::cout << "Entity destroyed" << std::endl;
+	}
+	
 	void print()
 	{
 		std::cout << X << ", " << Y << std::endl;
 	}
 };
-
-class Log
+void function()
 {
-public:
-	Log() = default;
-	static void write()
-	{
-
-	}
-};
-
+	Entity e;
+	e.print();
+}
 
 int main()
 {
-	Log::write();
-	Log l;
-
-	Entity e(2.0f, 3.0f);
-	std::cout << e.X << ", " << e.Y << std::endl;
-	e.print();
+	function();
 }
