@@ -5,10 +5,10 @@ class Entity
 public:
 	float X, Y;
 
-	Entity()
+	Entity(float x, float y)
 	{
-		X = 0.0f;
-		Y = 0.0f;
+		X = x;
+		Y = y;
 	}
 
 	void print()
@@ -19,7 +19,7 @@ public:
 
 int main()
 {
-	Entity e;
+	Entity e(2.0f, 3.0f);
 	std::cout << e.X << ", " << e.Y << std::endl;
 	e.print();
 }
