@@ -5,7 +5,7 @@ class Entity
 public:
 	float X, Y;
 
-	void Init()
+	Entity()
 	{
 		X = 0.0f;
 		Y = 0.0f;
@@ -20,7 +20,6 @@ public:
 int main()
 {
 	Entity e;
-	e.Init();
 	std::cout << e.X << ", " << e.Y << std::endl;
 	e.print();
 }
