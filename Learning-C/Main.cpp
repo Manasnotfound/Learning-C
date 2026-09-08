@@ -17,8 +17,22 @@ public:
 	}
 };
 
+class Log
+{
+public:
+	Log() = default;
+	static void write()
+	{
+
+	}
+};
+
+
 int main()
 {
+	Log::write();
+	Log l;
+
 	Entity e(2.0f, 3.0f);
 	std::cout << e.X << ", " << e.Y << std::endl;
 	e.print();
