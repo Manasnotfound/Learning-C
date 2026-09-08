@@ -1,15 +1,18 @@
 #include <iostream>
 
-enum Example : unsigned int
+class Entity
 {
-	A = 8, B, C
+public:
+	float X, Y;
+
+	void print()
+	{
+		std::cout << X << ", " << Y << std::endl;
+	}
 };
-
-
 
 int main()
 {
-	Example value = B;
-	std::cout << "Value: " << value << std::endl;
-	std::cin.get();
+	Entity e;
+	e.print();
 }
