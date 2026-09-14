@@ -5,30 +5,29 @@ class Entity
 public:
 	float X, Y;
 
-	Entity()
+	void Move(float xa, float ya)
 	{
-		std::cout << "Entity created" << std::endl;
-		X = 0.0f;
-		Y = 0.0f;
-	}
-
-	~Entity()
-	{
-		std::cout << "Entity destroyed" << std::endl;
-	}
-	
-	void print()
-	{
-		std::cout << X << ", " << Y << std::endl;
+		X += xa;
+		Y += ya;
 	}
 };
-void function()
+
+class Player : public Entity
 {
-	Entity e;
-	e.print();
-}
+	public:
+		const char* Name;
+
+		void print()
+		{
+			std::cout << Name << " is at " << X << ", " << Y << std::endl;
+		}
+};
 
 int main()
 {
-	function();
+	Player player;
+	player.X = 2.0f;
+	player.Y = 3.0f;
+	player.Name = "John";
+	player.print();
 }
