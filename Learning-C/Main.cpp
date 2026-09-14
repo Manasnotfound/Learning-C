@@ -1,33 +1,32 @@
 #include <iostream>
 
-class Entity
-{
-public:
-	float X, Y;
-
+class Entity{
+	public:
+		float x, y;
+	
 	void Move(float xa, float ya)
 	{
-		X += xa;
-		Y += ya;
+		x = xa;
+		y = ya;
 	}
 };
 
-class Player : public Entity
+class player : public Entity
 {
 	public:
 		const char* Name;
-
-		void print()
+		void PrintName()
 		{
-			std::cout << Name << " is at " << X << ", " << Y << std::endl;
+			std::cout << Name << " is at position (" << x << ", " << y << ")" << std::endl;
 		}
-};
+	};
+
 
 int main()
 {
-	Player player;
-	player.X = 2.0f;
-	player.Y = 3.0f;
+	player player;
+	player.x = 2.0f;
+	player.y = 3.0f;
 	player.Name = "John";
-	player.print();
+	player.PrintName();
 }
