@@ -1,11 +1,12 @@
 #include <iostream>
 #include <string>
+
 class Entity
 {
 public:
-    std::string GetName()
+    virtual std::string GetName()
     {
-        return "Entity";
+        return "Entity"; 
     }   
 };
 
@@ -15,13 +16,19 @@ private:
     std::string M_name;
 public:
     Player(const std::string& name): M_name(name) {}
-    std::string GetName() {return M_name;}
-};
+    std::string GetName() override {return M_name;}
+}; 
+
+void printName(Entity* entity)
+{
+    std::cout << entity-> GetName() << std::endl;
+}
+
 int main()
 {
 Entity *e = new Entity();
-std::cout << e->GetName() << std::endl;
+printName(e);
 
 Player *p = new Player("John");
-std::cout << p->GetName() << std::endl;
+printName(p);
 }
