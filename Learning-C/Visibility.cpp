@@ -1,7 +1,7 @@
 #include <iostream>
 
 class Entity{
-    public:
+    private:
         float X, Y;
         void Print() {}
     public:
