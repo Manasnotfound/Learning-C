@@ -1,7 +1,8 @@
 #include <iostream>
 
 int main(){
-    int Example[8];
+    int Example[8]
+    int Example = new int[5];
     Example[0] = 9;
     Example[6] = 54;
     Example[3] = 89;
