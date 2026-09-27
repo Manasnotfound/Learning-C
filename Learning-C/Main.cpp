@@ -1,26 +1,15 @@
 #include <iostream>
 #include <string>
 
-class Entity
-{
-private:
-	int x, y, z;
-	std::string m_Name;
-public:
-	Entity()
-		:m_Name("UnKnown"), x(0), y(0), z(0) {}
-
-	Entity(const std::string& name)
-		:m_Name(name){}
-
-	const std::string& GetName() const {return m_Name; }
-};
+static int s_Level = 1;
+static int s_Speed = 2;
 
 int main()
 {
-	Entity e0;
-	std::cout << e0.GetName() << std::endl;
-	 
-	Entity e1("Manas");
-	std::cout <<  e1.GetName() << std::endl;
+	// if (s_Level > 5)
+	// 	s_Speed = 10;
+	// else
+	// 	s_Speed = 5;
+
+	s_Speed = s_Level > 5 ? 10 : 5;
 }
