@@ -5,26 +5,25 @@ class Entity
 {
 private:
 	std::string m_Name;
-	mutable int Debug_count = 0;
 public:
-	const std::string& GetName() const
+	Entity()
 	{
-		 return m_Name; 
-		 Debug_count++;
+		m_Name = "UnKnown";
 	}
+
+	Entity(const std::string& name)
+	{
+		m_Name = name;
+	}
+
+	const std::string& GetName() const {return m_Name; }
 };
 
 int main()
 {
-	const Entity e;
-	e.GetName();
-
-	int x = 0;
-	auto f = [=]() mutable
-	{
-		x++;
-		std::cout << x << std::endl;
-	};
-
-	f();
+	Entity e0;
+	std::cout << e0.GetName() << std::endl;
+	 
+	Entity e1("Manas");
+	std::cout <<  e1.GetName() << std::endl;
 }
