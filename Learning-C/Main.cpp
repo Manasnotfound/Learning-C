@@ -4,11 +4,11 @@
 class Entity
 {
 private:
-	int m_score;
+	int x, y, z;
 	std::string m_Name;
 public:
 	Entity()
-		:m_Name("UnKnown"), m_score(80){}
+		:m_Name("UnKnown"), x(0), y(0), z(0) {}
 
 	Entity(const std::string& name)
 		:m_Name(name){}
