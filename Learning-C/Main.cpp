@@ -16,7 +16,15 @@ public:
 
 int main()
 {
-
 	const Entity e;
 	e.GetName();
+
+	int x = 0;
+	auto f = [=]() mutable
+	{
+		x++;
+		std::cout << x << std::endl;
+	};
+
+	f();
 }
