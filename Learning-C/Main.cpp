@@ -17,9 +17,6 @@ public:
 
 int main()
 {
-	Entity e0;
-	std::cout << e0.GetName() << std::endl;
-	 
-	Entity e1("Manas");
-	std::cout <<  e1.GetName() << std::endl;
+	Entity entity("MANAS");
+	std::cout << entity.GetName() << std::endl;
 }
