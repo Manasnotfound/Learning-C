@@ -17,10 +17,7 @@ public:
 
 int main()
 {
-	int a = 5;
 	int* b = new int;
-	std::cout << a << " " << b << std::endl;
-	delete b;
-	std::cout << b << std::endl;
+	std::cout << " " << b << std::endl;
 	// std::cin.get();
 }
