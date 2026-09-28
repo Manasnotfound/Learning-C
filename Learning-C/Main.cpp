@@ -19,9 +19,10 @@ int main()
 {
 	Entity* e;
 	{
-		Entity entity("MANAS");
-		e = &entity;
-		std::cout << entity.GetName() << std::endl;
+		Entity* entity = new Entity("MANAS");
+		e = entity;
+		std::cout << entity->GetName() << std::endl;
 	}
+	delete e;
 	// std::cin.get();
 }
