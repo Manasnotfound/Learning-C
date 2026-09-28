@@ -17,12 +17,10 @@ public:
 
 int main()
 {
-	Entity* e;
-	{
-		Entity* entity = new Entity("MANAS");
-		e = entity;
-		std::cout << entity->GetName() << std::endl;
-	}
-	delete e;
+	int a = 5;
+	int* b = new int;
+	std::cout << a << " " << b << std::endl;
+	delete b;
+	std::cout << b << std::endl;
 	// std::cin.get();
 }
