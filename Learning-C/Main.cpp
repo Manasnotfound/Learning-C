@@ -1,23 +1,25 @@
 #include <iostream>
 #include <string>
 
-static int s_Level = 1;
-static int s_Speed = 2;
+using String = std::string;
+
+class Entity
+{
+private:
+	int x, y, z;
+	String m_Name;
+public:
+	Entity() : m_Name("UnKnown") {}
+	Entity(const String& name) : m_Name(name) {}
+
+	const String& GetName() const {return m_Name; }
+};
 
 int main()
 {
-	// if (s_Level > 5)
-	// 	s_Speed = 10;
-	// else
-	// 	s_Speed = 5;
-
-	s_Speed = s_Level > 5 ? s_Level > 10 ? 15 : 10 : 5;
-
-	std::string rank = s_Level > 10 ? "Master" : "Beginner" ;
-
-	// std::string otherRank;
-	// if (s_Level > 10)
-	// 	otherRank = "Master";
-	// else	
-	// 	otherRank = "Beginner";
+	Entity e0;
+	std::cout << e0.GetName() << std::endl;
+	 
+	Entity e1("Manas");
+	std::cout <<  e1.GetName() << std::endl;
 }
