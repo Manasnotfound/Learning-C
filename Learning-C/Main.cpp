@@ -17,7 +17,10 @@ public:
 
 int main()
 {
-	int* b = new int;
-	std::cout << " " << b << std::endl;
+	int a = 2;
+	int* b = new int[50];
+
+	Entity* e = new Entity();
+	Entity* e = (Entity*)malloc(sizeof(Entity));
 	// std::cin.get();
 }
