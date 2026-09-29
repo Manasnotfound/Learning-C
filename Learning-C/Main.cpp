@@ -22,5 +22,6 @@ int main()
 
 	Entity* e = new Entity();
 	delete e;
+	delete [] b;
 	// std::cin.get();
 }
