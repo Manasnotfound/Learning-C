@@ -21,6 +21,6 @@ int main()
 	int* b = new int[50];
 
 	Entity* e = new Entity();
-	Entity* e = (Entity*)malloc(sizeof(Entity));
+	delete e;
 	// std::cin.get();
 }
