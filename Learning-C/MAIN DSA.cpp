@@ -82,3 +82,29 @@ using namespace std;
 // Explanation:
 
 // nums[0] + nums[1] = 1 + 6 = 7
+
+class Solution {
+public:
+    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+        ListNode dummy;
+        ListNode* tail = &dummy;
+        int carry = 0;
+
+        while (l1 || l2 || carry) {
+            int sum = carry;
+
+            if (l1) sum += l1->val;
+            if (l2) sum += l2->val;
+
+            carry = sum / 10;
+
+            tail->next = new ListNode(sum % 10);
+            tail = tail->next;
+
+            if (l1) l1 = l1->next;
+            if (l2) l2 = l2->next;
+        }
+
+        return dummy.next;
+    }
+};
